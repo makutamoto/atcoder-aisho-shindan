@@ -191,7 +191,7 @@ test('lib/atcoder/getUser', () => {
     rating: 747,
     avatar: 'https://img.atcoder.jp/icons/d8034bf137577f59350bbedda1d698f2.png',
   }
-  axios.get.mockResolvedValue(input)
+  ;(axios.get as any).mockResolvedValue(input)
   return getUser('Makutamoto').then((data) => {
     expect(data).toEqual(expected)
   })
