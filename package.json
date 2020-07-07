@@ -26,12 +26,18 @@
     ]
   },
   "dependencies": {
+    "@google-cloud/storage": "^5.1.1",
     "@types/jsdom": "^16.2.3",
+    "@types/uuid": "^8.0.0",
     "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "convert-svg-to-png": "^0.5.0",
     "jsdom": "^16.2.2",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-bootstrap": "1.0.1",
+    "react-dom": "^16.13.1",
+    "uuid": "^8.2.0"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",

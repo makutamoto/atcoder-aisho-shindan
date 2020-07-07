@@ -1,12 +1,12 @@
-import axios from 'axios';
+import axios from 'axios'
 
-import { getUser, User } from '../../lib/atcoder';
+import { getUser, User } from '../../lib/atcoder'
 
-jest.mock('axios');
+jest.mock('axios')
 
 test('lib/atcoder/getUser', () => {
-    let input = {
-        data: `\
+  const input = {
+    data: `\
             <!DOCTYPE html>
             <html>
             <head>
@@ -184,15 +184,15 @@ test('lib/atcoder/getUser', () => {
                         aria-hidden="true"></span> Page Top</div>
             </body>
             </html>
-        `
-    };
-    let expected: User = {
-        name: 'Makutamoto',
-        rating: 747,
-        avatar: 'https://img.atcoder.jp/icons/d8034bf137577f59350bbedda1d698f2.png',
-    };
-    axios.get.mockResolvedValue(input);
-    return getUser("Makutamoto").then(data => {
-        expect(data).toEqual(expected);
-    });
-});
+        `,
+  }
+  const expected: User = {
+    name: 'Makutamoto',
+    rating: 747,
+    avatar: 'https://img.atcoder.jp/icons/d8034bf137577f59350bbedda1d698f2.png',
+  }
+  axios.get.mockResolvedValue(input)
+  return getUser('Makutamoto').then((data) => {
+    expect(data).toEqual(expected)
+  })
+})
