@@ -73,11 +73,13 @@ export async function generateImage(
       compatibilityColor
     ),
     {
-      puppeteer: {
-        args: chrome.args,
-        executablePath: await chrome.executablePath,
-        headless: chrome.headless,
-      },
+      puppeteer: process.env.GCLOUD_CREDENTIALS
+        ? {
+            args: chrome.args,
+            executablePath: await chrome.executablePath,
+            headless: chrome.headless,
+          }
+        : undefined,
     }
   )
 }
