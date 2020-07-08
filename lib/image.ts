@@ -51,6 +51,12 @@ export async function generateImage(
       avatarB,
       compatibility,
       compatibilityColor
-    )
+    ),
+    {
+      puppeteer: {
+        executablePath:
+          './node_modules/puppeteer/.local-chromium/linux-686378/chrome-linux/chrome',
+      },
+    }
   )
 }
