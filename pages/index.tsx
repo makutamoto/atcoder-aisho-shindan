@@ -33,9 +33,31 @@ export default function (props: NotFound) {
           </Alert>
         )
       )}
-      <div>
-        <h1>AtCoder相性診断</h1>
-      </div>
+      <h1>AtCoder相性診断</h1>
+      <p>
+        AtCoder IDの相性をレートをもとに判定します。
+        <br />
+        導出される数字に特に意味はありません。
+      </p>
+      <p>
+        このサイトのGitHubリポジトリ:{' '}
+        <a
+          href="https://github.com/makutamoto/atcoder-aisho-shindan"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://github.com/makutamoto/atcoder-aisho-shindan
+        </a>
+        <br />
+        作者Twitter:{' '}
+        <a
+          href="https://twitter.com/makutamoto"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://twitter.com/makutamoto
+        </a>
+      </p>
     </>
   )
 }
