@@ -24,10 +24,10 @@ export default function (props: Image) {
   return (
     <>
       <Head>
-        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:creator" content="@makutamoto" />
         <meta property="og:title" content="AtCoder相性診断" />
-        <meta property="og:type" content="website" />
+        <meta property="og:description" content={message} />
         <meta property="og:image" content={props.src} />
       </Head>
       <TwitterShareButton
