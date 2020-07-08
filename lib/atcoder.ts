@@ -2,6 +2,9 @@ import axios, { AxiosResponse } from 'axios'
 import { JSDOM } from 'jsdom'
 
 const USER_PAGE = (name: string) => `https://atcoder.jp/users/${name}`
+const DEFAULT_AVATAR_URL = '//img.atcoder.jp/assets/icon/avatar.png'
+const DEFAULT_AVATAR = (avatar: string) =>
+  avatar === DEFAULT_AVATAR_URL ? 'https:' + DEFAULT_AVATAR_URL : avatar
 
 const NAME_SELECTOR = '#main-container h3 span'
 const RATING_SELECTOR = '#main-container table span'
@@ -45,7 +48,7 @@ export async function getUser(username: string): Promise<User | null> {
     avatar && {
       name: name.textContent,
       rating: Number(rating.textContent),
-      avatar: avatar.getAttribute('src'),
+      avatar: DEFAULT_AVATAR(avatar.getAttribute('src')),
     }
   )
 }
