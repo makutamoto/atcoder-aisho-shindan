@@ -11,8 +11,13 @@ interface NotFound {
   users: string[]
 }
 
-const RESULT_PAGE = (id: string, userA: string, userB: string) =>
-  `/result/${id}?user_a=${userA}&user_b=${userB}`
+const RESULT_PAGE = (
+  id: string,
+  userA: string,
+  userB: string,
+  compatibility: number
+) =>
+  `/result/${id}?user_a=${userA}&user_b=${userB}&compatibility=${compatibility}`
 
 export default function (props: NotFound) {
   return (
@@ -64,7 +69,7 @@ export async function getServerSideProps(
       const id = uuid()
       await uploadImage(id, image)
       props.res.writeHead(303, {
-        Location: RESULT_PAGE(id, userA.name, userB.name),
+        Location: RESULT_PAGE(id, userA.name, userB.name, compatibility),
       })
       props.res.end()
     }

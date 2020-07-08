@@ -37,6 +37,7 @@
     "react": "^16.13.1",
     "react-bootstrap": "1.0.1",
     "react-dom": "^16.13.1",
+    "react-twitter-embed": "^3.0.3",
     "uuid": "^8.2.0"
   },
   "devDependencies": {

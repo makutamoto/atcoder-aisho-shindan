@@ -14,7 +14,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "./",
-    "paths": { "convert-svg-to-png": ["types/convert-svg-to-png"] },
+    "paths": {
+      "convert-svg-to-png": ["types/convert-svg-to-png"],
+      "react-twitter-embed": ["types/react-twitter-embed"]
+    },
     "typeRoots": ["types", "node_modules/@types"]
   },
   "exclude": ["node_modules", ".next", "out"],
