@@ -1,4 +1,6 @@
 export interface PuppeteerOptions {
+  args: string[]
+  headless: boolean
   executablePath: string
 }
 

@@ -1,3 +1,4 @@
+import chrome from 'chrome-aws-lambda'
 import { convert } from 'convert-svg-to-png'
 
 const SVG = (
@@ -54,8 +55,9 @@ export async function generateImage(
     ),
     {
       puppeteer: {
-        executablePath:
-          './node_modules/puppeteer/.local-chromium/linux-686378/chrome-linux/chrome',
+        args: chrome.args,
+        executablePath: await chrome.executablePath,
+        headless: chrome.headless,
       },
     }
   )
